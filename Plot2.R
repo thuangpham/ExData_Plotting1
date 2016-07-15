@@ -1,7 +1,7 @@
 #set the working directory
 setwd("C:/DataScience/Exploratory Data/ExData_Plotting1/ExData_Plotting1")
 
-##Read data
+##Read data using a function I created, since that code is being use for all the other program
 source("Program/LoadData.R")
 
 ##set datetime column by combining Date and Time columns
