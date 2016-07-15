@@ -9,7 +9,7 @@ df$DateTime <- strptime(paste(df$Date, df$Time), format="%d/%m/%Y %H:%M:%S")
 
 #plot to png
 
-#png("plot3.png",width=500,height=500)
+png("plot3.png",width=500,height=500)
 plot(df$DateTime, df$Sub_metering_1,ylab="Energy sub metering",xlab=NA,type="l",col="black")
 
 #add lines for sub_metering_2 column using red
