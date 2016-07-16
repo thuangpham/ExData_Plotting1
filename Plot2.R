@@ -2,13 +2,10 @@
 setwd("C:/DataScience/Exploratory Data/ExData_Plotting1/ExData_Plotting1")
 
 library(dplyr)
-file<-"household_power_consumption.txt"
-#read in only the data starting from the first row of the 2007-02-01 to 2007-02-02
-df <- read.csv(file, sep=";", header=TRUE,stringsAsFactors=FALSE,
-               colClasses = c("Date","character","numeric","numeric","numeric","numeric","numeric","numeric","numeric"),
-               na.strings="?",skip = 66637, nrow = 2880)
+file<-"Data/household_power_consumption.txt"
 
-##apply the header row to the data
+df <- read.csv(file, sep=";", header=TRUE,stringsAsFactors=FALSE,skip = 66637, nrow = 2880,
+               na.strings="?")
 name <- sapply(read.table(file, nrow = 1, sep = ";"), as.character)
 names(df) <- name
 
